@@ -1,9 +1,13 @@
 package com.example.blog.entities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.Instant;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "post")
 public class Post {
@@ -23,51 +27,4 @@ public class Post {
 
     @Column(name = "upvote")
     private Integer upvote;
-
-    public Integer getUpvote() {
-        return upvote;
-    }
-
-    public void setUpvote(Integer upvote) {
-        this.upvote = upvote;
-    }
-
-    public User getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(User author) {
-        this.author = author;
-    }
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public Instant getPublishedAt() {
-        return publishedAt;
-    }
-
-    public void setPublishedAt(Instant publishedAt) {
-        this.publishedAt = publishedAt;
-    }
 }
